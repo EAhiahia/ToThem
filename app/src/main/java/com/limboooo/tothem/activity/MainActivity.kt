@@ -14,10 +14,6 @@ import com.limboooo.tothem.viewmodel.MyViewModel
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
 
-
-/**
- * developing branch
- */
 class MainActivity : AppCompatActivity() {
 
     private val binding: ActivityMainBinding by lazy {
