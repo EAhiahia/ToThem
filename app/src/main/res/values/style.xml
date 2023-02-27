@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SettingMenuView">
+        <attr name="text" format="string" />
+        <attr name="nextVisible" format="boolean" />
+        <attr name="icon" format="reference"/>
+    </declare-styleable>
+
+
+
+
+
+
+
+</resources>

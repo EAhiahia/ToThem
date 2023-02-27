@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:id="@+id/exo_play_pause"
+        style="@style/ExoStyledControls.Button.Center.PlayPause"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@id/exo_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|start"
+        android:layoutDirection="ltr"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@id/exo_progress"
+        app:layout_constraintStart_toStartOf="@id/exo_progress">
+
+        <TextView
+            android:id="@id/exo_position"
+            style="@style/ExoStyledControls.TimeText.Position" />
+
+        <TextView style="@style/ExoStyledControls.TimeText.Separator" />
+
+        <TextView
+            android:id="@id/exo_duration"
+            style="@style/ExoStyledControls.TimeText.Duration" />
+
+    </LinearLayout>
+
+    <!--        显示播放进度条的，可以使用DefaultTimeBar，也可以使用placeholder，会自动替换-->
+    <androidx.media3.ui.DefaultTimeBar
+        android:id="@+id/exo_progress"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="@dimen/fab_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.90" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

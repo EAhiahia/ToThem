@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Widget.Material3.CardView.Elevated"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/fab_margin"
+    android:layout_marginTop="@dimen/fab_margin"
+    android:layout_marginEnd="@dimen/fab_margin">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin">
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/TextAppearance.Material3.TitleLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="教程名字"
+            app:layout_constraintEnd_toStartOf="@id/delete_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/video_cover"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="@drawable/ic_play_big"
+            android:foregroundGravity="center"
+            android:foregroundTint="@color/white"
+            app:cornerFamily="rounded"
+            app:cornerSize="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/delete_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="?attr/colorError"
+            android:text="删除"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:rippleColor="?attr/colorOnError" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
